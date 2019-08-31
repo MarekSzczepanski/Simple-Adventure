@@ -17,14 +17,14 @@
                 <p class="name">Player</p>
                 <div class="health">
                     <img class="healthImg" src="images/health.png" alt="health">
-                    <p>Health: <span>100</span></p>
+                    <p>Health: <span class="playerHealth"></span></p>
                 </div>
             </div>
             <img class ="characterImg" src="images/valkyrie.png" alt="player">
-            <p class="weapon">Weapon: <span>Magic Longsword</span></p>
+            <p class="weapon">Weapon: <span class="weaponSpan"></span><img class="activeWeapon" src=""></p>
             <div class="gold">
                 <img class="goldImg" src="images/coin.png" alt="gold">
-                <p>Gold:<span>1000</span></p>
+                <p>Gold:<span class="goldSpan"></span></p>
             </div>
             <div class="shop">
                 <img class="potionImgShop" src="images/potion.png" alt="potion">
@@ -37,7 +37,7 @@
                 </div>
                 <div class="slotWrap">
                     <div class="slot1">
-                        <img class="potion" src="images/potion.png" alt="potion">
+                        <!-- <img class="potion" src="images/potion.png" alt="potion"> -->
                     </div>
                     <div class="slot2"></div>
                     <div class="slot3"></div>
@@ -55,21 +55,23 @@
         </div>
         <div class="enemyWrap">
             <div class="characterHeading">
-                <p class="enemyName">Enemy</p>
+                <p class="enemyName"><!-- Enemy --></p>
                 <div class="health">
                     <img class="healthImg" src="images/health.png" alt="health">
-                    <p>Health: <span>100</span></p>
+                    <p>Health: <span class="enemyHealth"><!-- 100 --></span></p>
                 </div>
             </div>
-            <img class="characterImg" src="images/troll.png" alt="enemy">
+            <img id="enemyImg" class="characterImg" src="" alt="enemy">
             <div class="drop">
                 <p class="dropChance">Drop chance:</p>
-                <p>Gold: 2-4 coins</p>
+                <!-- <p>Gold: 2-4 coins</p>
                 <p>Club: 30%</p>
-                <p>Morning Star: 10%</p>
+                <p>Morning Star: 10%</p> -->
             </div>
         </div>
     </div>
     <script src="main.js"></script>
+    <script src="characters.js"></script>
+    <script src="weapons.js"></script>
 </body>
 </html>
