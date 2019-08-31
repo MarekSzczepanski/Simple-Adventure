@@ -6,9 +6,70 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Simple Adventure</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch:400,700&display=swap" rel="stylesheet"> 
 </head>
 <body>
-    
+    <div class="wrap">
+        <h1>simple adventure</h1>
+        <button class="playButton">press to play</button>
+        <div class="playerWrap">
+            <div class="characterHeading">
+                <p class="name">Player</p>
+                <div class="health">
+                    <img class="healthImg" src="images/health.png" alt="health">
+                    <p>Health: <span>100</span></p>
+                </div>
+            </div>
+            <img class ="characterImg" src="images/valkyrie.png" alt="player">
+            <p class="weapon">Weapon: <span>Magic Longsword</span></p>
+            <div class="gold">
+                <img class="goldImg" src="images/coin.png" alt="gold">
+                <p>Gold:<span>1000</span></p>
+            </div>
+            <div class="shop">
+                <img class="potionImgShop" src="images/potion.png" alt="potion">
+                <p class="shopText">Buy potion: 5 gold</p>
+            </div>
+            <div class="backpack">
+                <div class="backpackHeading">
+                    <img class="backpackImage" src="images/backpack.png" alt="backpack">
+                    <p>backpack</p>
+                </div>
+                <div class="slotWrap">
+                    <div class="slot1">
+                        <img class="potion" src="images/potion.png" alt="potion">
+                    </div>
+                    <div class="slot2"></div>
+                    <div class="slot3"></div>
+                    <div class="slot4"></div>
+                    <div class="slot5"></div>
+                    <div class="slot6"></div>
+                    <div class="slot7"></div>
+                    <div class="slot8"></div>
+                </div>
+            </div>
+        </div>
+        <div class="attack">
+            <img class="attackImg" src="images/swords.png" alt="attack">
+            <button class="attackButton">attack!</button>
+        </div>
+        <div class="enemyWrap">
+            <div class="characterHeading">
+                <p class="enemyName">Enemy</p>
+                <div class="health">
+                    <img class="healthImg" src="images/health.png" alt="health">
+                    <p>Health: <span>100</span></p>
+                </div>
+            </div>
+            <img class="characterImg" src="images/troll.png" alt="enemy">
+            <div class="drop">
+                <p class="dropChance">Drop chance:</p>
+                <p>Gold: 2-4 coins</p>
+                <p>Club: 30%</p>
+                <p>Morning Star: 10%</p>
+            </div>
+        </div>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>

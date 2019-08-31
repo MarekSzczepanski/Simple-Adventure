@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: beige;
+}
+h1, button, p {
+    font-family: 'Cabin Sketch';
+    text-transform: uppercase;
+}
+h1, button {
+    text-align: center;
+}
+h1 {
+    margin-bottom: 5%;
+    font-size: 4rem;
+    display: none;
+}
+p {
+    letter-spacing: .1rem;
+}
+.playButton, .shop, .attackButton{
+   width: 30%;
+   height: 5%;
+   background: #CA7407;
+   color: yellow;
+   border: none;
+   font-size: 1rem;
+   line-height: 2.1;
+   letter-spacing: .1rem;
+   outline: none;
+   border-radius: .5em;
+   display: none;
+}
+button:hover, .shop:hover {
+    color: lime;
+    cursor: pointer;
+}
+.wrap {
+    width: 97vw;
+    height: 97vh;
+    margin: 1.5vh auto;
+    display: flex;
+    /* flex-direction: column; */ 
+    /* justify-content: center; */
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid orange;
+}
+.characterHeading {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.name, .health {
+    font-size: 1.4rem;
+}
+.name, .enemyName {
+    font-size: 1.8rem;
+    color: limegreen;
+    font-weight: bold;
+}
+.enemyName {
+    color: crimson;
+}
+.health, .gold {
+    display: flex;
+    align-items: center;
+}
+.healthImg {
+    width: 1rem;
+    height: 1rem;
+    margin-right: .2rem;
+    padding-bottom: .05rem;
+}
+.characterImg {
+    /* trza sciagnac wieksze obrazki */
+    margin-top: 6rem;
+    width: 10rem;
+    height: 10rem;
+}
+.playerWrap, .enemyWrap {
+    width: 40%;
+    height: 95%;
+    border: 1px solid blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.playerWrap {
+    margin-left: 1rem;
+}
+.enemyWrap {
+    border: 1px solid red;
+    margin-right: 1rem;
+}
+.weapon, .gold {
+    margin-top: 3rem;
+}
+.weapon span {
+    color: #CA7407;
+}
+.goldImg {
+    width: .9rem;
+    height: .9rem;
+    margin-right: .4rem;
+    padding-bottom: .05rem;
+}
+.shop {
+    width: 15rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    margin-top: .5rem;
+}
+.potionImgShop {
+    width: 1.8rem;
+    height: 80%;
+    margin-right: .5rem;
+}
+.shopText {
+   width: 100%;
+   height: 100%;
+   padding-top: .1rem;
+   /* display: block; */
+}
+.backpack {
+    width: 100%;
+    height: 17%;
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* background: red; */
+}
+.backpackHeading {
+    width: 100%;
+    height: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   /*  background: red; */
+}
+.backpackHeading img {
+    margin: -.2rem .5rem 0 .2rem;
+}
+.backpackHeading p {
+    font-size: 1.3rem;
+}
+.backpackImage {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+.slotWrap {
+    display: flex;
+    justify-content: space-around;
+    /* align-items: center; */
+}
+.slotWrap div {
+    width: 3.5rem;
+    height: 3.5rem;
+    border: 1px solid #CA7407;;
+}
+.potion {
+    width: 80%;
+    height: 80%;
+    margin: 10%;
+}
+.drop {
+    margin: auto 0 3rem;
+}
+.dropChance {
+    font-size: 2rem;
+    margin-bottom: .5rem;
+}
+.drop p {
+    text-align: center;
+}
+.attack {
+    width: 10rem;
+    height: 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.attackImg {
+    width: 50%;
+}
+.attackButton {
+    width: 100%;
+    height: 2rem;
+    margin-top: 1rem;
+    display: block;
+}

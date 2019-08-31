@@ -13,4 +13,4 @@ Simple adventure is a browser turn based game with a fantasy theme. It's made be
 https://marekszczepanski.github.io/Simple-Adventure/
 
 ## Recent changes
-1) Init
+1) Add graphics.
