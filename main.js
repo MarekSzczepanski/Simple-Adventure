@@ -110,7 +110,7 @@ const attackMonster = () => {
 const buyPotion = () => {
     if (newPlayer.gold > 4) {
         for (let i=1; i<9; i++) {
-            if (document.querySelector(".potion"+i).src === "file:///D:/Folder/Programowanie/Projekty/Simple%20Adventure/index.html") {
+            if (document.querySelector(".potion"+i).src === "https://marekszczepanski.github.io/Simple-Adventure/") {
                 newPlayer.gold -= 5;
                 document.querySelector(".goldSpan").textContent = newPlayer.gold;
                 document.querySelector(".potion"+i).src = "images/potion.png";
