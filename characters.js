@@ -20,7 +20,6 @@ class Player extends Character {
         this.power = Math.floor(Math.random() * (this.weapon.attack[1]+1 - this.weapon.attack[0])) + this.weapon.attack[0];
         document.querySelector(".enemyHealth").textContent -= this.power;
         this.health = document.querySelector(".playerHealth").textContent;
-        console.log(this.health)
     }
     newWeapon() {
         this.weapon = dropped;

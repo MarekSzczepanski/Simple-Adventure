@@ -2,7 +2,7 @@
 ##### Very simple turn based game made for OOP training purposes only
 
 #### Introduction
-Simple adventure is a browser turn based game with a fantasy theme. It's made because of Object Oriented Programming training with Javascript, not for commercial use or gameplay fun. The main goal is just to make this work. It may be a base for a real RPG game in the future.
+Simple adventure is a browser turn based game with a fantasy theme. It's made because of Object Oriented Programming training with Javascript, not for commercial use or gameplay fun. The main goal is just to make game work. It may be a base for a real RPG game in the future. Website is not responsive.
 
 #### Technologies
 ⋅HTML  
@@ -13,7 +13,8 @@ Simple adventure is a browser turn based game with a fantasy theme. It's made be
 https://marekszczepanski.github.io/Simple-Adventure/
 
 ## Recent changes
-1) Add weapon looting and drop lists.  
-2) Add game over on 0 health ponts.  
-3) Add monster death and new enemy button.  
-4) Minor layout changes.
+1) Add gold looting.  
+2) Add potion shop.  
+3) Minor layout changes.  
+4) Add credits.  
+5) Add favicon.

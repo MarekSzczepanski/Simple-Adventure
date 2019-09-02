@@ -3,6 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    scrollbar-width: none;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
 body {
     background: beige;
 }
@@ -16,7 +22,6 @@ h1, button {
 h1 {
     margin-bottom: 5%;
     font-size: 4rem;
-    /* display: none; */
 }
 p {
     letter-spacing: .1rem;
@@ -32,7 +37,6 @@ p {
    letter-spacing: .1rem;
    outline: none;
    border-radius: .5em;
-   /* display: none; */
 }
 button:hover, .shop:hover {
     color: lime;
@@ -45,7 +49,6 @@ button:hover, .shop:hover {
     display: flex;
     flex-direction: column; 
     justify-content: center;
-    /* justify-content: space-between; */
     align-items: center;
 }
 .characterHeading {
@@ -76,7 +79,6 @@ button:hover, .shop:hover {
     padding-bottom: .05rem;
 }
 .characterImg {
-    /* trza sciagnac wieksze obrazki */
     margin-top: 6rem;
     width: 10rem;
     height: 10rem;
@@ -86,7 +88,6 @@ button:hover, .shop:hover {
     height: 95%;
     border: 1px solid limegreen;
     display: none;
-    /* display: flex; */
     flex-direction: column;
     align-items: center;
 }
@@ -126,7 +127,6 @@ button:hover, .shop:hover {
    width: 100%;
    height: 100%;
    padding-top: .1rem;
-   /* display: block; */
 }
 .backpack {
     width: 100%;
@@ -135,7 +135,6 @@ button:hover, .shop:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    /* background: red; */
 }
 .backpackHeading {
     width: 100%;
@@ -143,7 +142,6 @@ button:hover, .shop:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-   /*  background: red; */
 }
 .backpackHeading img {
     margin: -.2rem .5rem 0 .2rem;
@@ -158,7 +156,6 @@ button:hover, .shop:hover {
 .slotWrap {
     display: flex;
     justify-content: space-around;
-    /* align-items: center; */
 }
 .slotWrap div {
     width: 3.5rem;
@@ -171,6 +168,7 @@ button:hover, .shop:hover {
     margin: 10%;
 }
 .newEnemyButton {
+    margin-top: 2rem;
     display: none;
 }
 .drop {
@@ -187,7 +185,6 @@ button:hover, .shop:hover {
     width: 10rem;
     height: 8rem;
     display: none;
-    /* display: flex; */
     flex-direction: column;
     align-items: center;
 }
@@ -222,5 +219,10 @@ button:hover, .shop:hover {
 .continueButton {
     width: 15vw;
     height: 5vh;
-    /* margin-left: 2.25vw; */
+}
+#potion {
+    width: 80%;
+    height: 80%;
+    margin: 10%;
+    display: none;
 }

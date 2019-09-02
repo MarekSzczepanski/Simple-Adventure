@@ -1,14 +1,12 @@
-const playButton = document.querySelector(".playButton");
-const enemyName = document.querySelector(".enemyName");
-const enemyImg = document.getElementById("enemyImg");
 let chosenMonster;
 let dropped = {
     attack: ["empty", "empty"] // Avoid null
 }
 const startGame = () => {
     document.querySelector(".attackButton").addEventListener("click", attackMonster);
-    playButton.style.display = "none";
+    document.querySelector(".playButton").style.display = "none";
     document.querySelector("h1").style.display = "none";
+    document.querySelector(".newEnemyButton").style.display = "none";
     document.querySelector(".playerWrap").style.display = "flex";
     document.querySelector(".enemyWrap").style.display = "flex";
     document.querySelector(".attack").style.display = "flex";
@@ -18,7 +16,6 @@ const startGame = () => {
         duration: 0,
         fill: "forwards",
     });
-    document.querySelector(".newEnemyButton").style.display = "none";
     let monsterHealth;
     let monsterGold;
     const dropText = document.querySelectorAll(".dropText");
@@ -39,7 +36,6 @@ const startGame = () => {
             dropListElement.textContent = monster.items[i].name + ": " + monster.chance[i] + "%";
             if (monsterDrop <= monster.chance[i] && flag < 1) {
                 dropped = monster.items[i]
-                console.log(dropped);
                 flag = 1;
             }
         }
@@ -71,14 +67,16 @@ const startGame = () => {
         chosenMonster = newRat;
     }
     dropRoll(chosenMonster.drop);
-    enemyName.textContent = chosenMonster.name;
-    enemyImg.src =chosenMonster.image;
+    document.querySelector(".enemyName").textContent = chosenMonster.name;
+    document.getElementById("enemyImg").src = chosenMonster.image;
 }
-playButton.addEventListener("click", startGame);
+document.querySelector(".playButton").addEventListener("click", startGame);
 const attackMonster = () => {
     chosenMonster.attack();
     newPlayer.attack();
     if (document.querySelector(".enemyHealth").textContent < 1) {
+        newPlayer.gold += chosenMonster.gold;
+        document.querySelector(".goldSpan").textContent = newPlayer.gold;
         document.querySelector(".enemyHealth").textContent = 0;
         document.getElementById("enemyImg").animate([{ opacity: 1 }, { opacity: 0 }], {
             duration: 1000,
@@ -90,7 +88,7 @@ const attackMonster = () => {
         if (dropped.attack[0] + dropped.attack[1] > newPlayer.weapon.attack[0] + newPlayer.weapon.attack[1]) {
             newPlayer.newWeapon();
             document.querySelector(".dropPopUp").style.display = "flex";
-            document.querySelector(".lootImg").src=`images/${dropped.name}_big.png`;
+            document.querySelector(".lootImg").src = `images/${dropped.name}_big.png`;
             if (dropped.name.charAt(0) === "a") {
                 document.querySelector(".lootedWeapon").textContent = "an " + dropped.name;
             }
@@ -104,9 +102,38 @@ const attackMonster = () => {
         }
     }
     if (newPlayer.health < 1) {
-        console.log("game over")
         newPlayer.health = 0;
         document.querySelector(".playerHealth").textContent = 0;
         location.reload();
     }
 }
+const buyPotion = () => {
+    if (newPlayer.gold > 4) {
+        for (let i=1; i<9; i++) {
+            if (document.querySelector(".potion"+i).src === "file:///D:/Folder/Programowanie/Projekty/Simple%20Adventure/index.html") {
+                newPlayer.gold -= 5;
+                document.querySelector(".goldSpan").textContent = newPlayer.gold;
+                document.querySelector(".potion"+i).src = "images/potion.png";
+                document.querySelector(".potion"+i).style.display = "block";
+                return;
+            }
+        }
+    }
+}
+document.querySelector(".shop").addEventListener("click", buyPotion);
+const heal = (e) => {
+    const healPower = Math.floor(Math.random() * (41 - 20)) + 20;
+    newPlayer.health = parseInt(newPlayer.health) + healPower;
+    e.target.src = "";
+    e.target.style.display = "none";
+    if (newPlayer.health > 100) {
+        newPlayer.health = 100;
+    }
+    document.querySelector(".playerHealth").textContent = newPlayer.health;
+}
+const potions = document.querySelectorAll("#potion");
+potions.forEach(potion => {
+    if (document.querySelector(".playerHealth").textContent < 100) {
+        potion.addEventListener("click", heal);
+    }
+})

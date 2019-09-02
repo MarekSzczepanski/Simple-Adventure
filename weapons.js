@@ -43,4 +43,4 @@ const magic_sword = {
     image: "images/magic_sword.png",
     attack: [6, 7]
 }
-this.newPlayer = new Player("player", "images/valkyriea.png", 100, 0, knife);
+this.newPlayer = new Player("player", "images/valkyrie.png", 100, 0, knife);
