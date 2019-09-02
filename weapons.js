@@ -5,41 +5,42 @@ const knife = {
 }
 const club = {
     name: "club",
-    image: "",
+    image: "images/club.png",
     attack: [1, 4]
 }
 const short_sword = {
     name: "short sword",
-    image: "",
+    image: "images/short_sword.png",
     attack: [2, 4]
 }
 const morning_star = {
     name: "morning star",
-    image: "images/morningstar.png",
+    image: "images/morning_star.png",
     attack: [1, 6]
 }
 const broad_sword = {
     name: "broad sword",
-    image: "images/broadsword.png",
+    image: "images/broad_sword.png",
     attack: [2, 6]
 }
 const axe = {
-    name: "",
-    image: "",
+    name: "axe",
+    image: "images/axe.png",
     attack: [3, 6]
 }
 const royal_sword = {
     name: "royal sword",
-    image: "images/royalsword.png",
+    image: "images/royal_sword.png",
     attack: [4, 6]
 }
 const ancient_sword = {
-    name: "",
-    image: "",
+    name: "ancient sword",
+    image: "images/ancient_sword.png",
     attack: [5, 6]
 }
 const magic_sword = {
-    name: "",
-    image: "",
+    name: "magic sword",
+    image: "images/magic_sword.png",
     attack: [6, 7]
 }
+this.newPlayer = new Player("player", "images/valkyriea.png", 100, 0, knife);

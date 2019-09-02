@@ -55,20 +55,23 @@
         </div>
         <div class="enemyWrap">
             <div class="characterHeading">
-                <p class="enemyName"><!-- Enemy --></p>
+                <p class="enemyName"></p>
                 <div class="health">
                     <img class="healthImg" src="images/health.png" alt="health">
-                    <p>Health: <span class="enemyHealth"><!-- 100 --></span></p>
+                    <p>Health: <span class="enemyHealth"></span></p>
                 </div>
             </div>
             <img id="enemyImg" class="characterImg" src="" alt="enemy">
+            <button class="newEnemyButton">next enemy!</button>
             <div class="drop">
                 <p class="dropChance">Drop chance:</p>
-                <!-- <p>Gold: 2-4 coins</p>
-                <p>Club: 30%</p>
-                <p>Morning Star: 10%</p> -->
             </div>
         </div>
+    </div>
+    <div class="dropPopUp">
+        <p>you looted <span class="lootedWeapon"></span></p>
+        <img class="lootImg" src="" alt="loot">
+        <button class="continueButton">continue</button>
     </div>
     <script src="main.js"></script>
     <script src="characters.js"></script>

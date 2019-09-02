@@ -21,7 +21,7 @@ h1 {
 p {
     letter-spacing: .1rem;
 }
-.playButton, .shop, .attackButton{
+.playButton, .shop, .newEnemyButton, .attackButton, .continueButton {
    width: 30%;
    height: 5%;
    background: #CA7407;
@@ -47,7 +47,6 @@ button:hover, .shop:hover {
     justify-content: center;
     /* justify-content: space-between; */
     align-items: center;
-    border: 1px solid orange;
 }
 .characterHeading {
     margin-top: 2rem;
@@ -85,7 +84,7 @@ button:hover, .shop:hover {
 .playerWrap, .enemyWrap {
     width: 40%;
     height: 95%;
-    border: 1px solid blue;
+    border: 1px solid limegreen;
     display: none;
     /* display: flex; */
     flex-direction: column;
@@ -171,6 +170,9 @@ button:hover, .shop:hover {
     height: 80%;
     margin: 10%;
 }
+.newEnemyButton {
+    display: none;
+}
 .drop {
     margin: auto 0 3rem;
 }
@@ -197,4 +199,28 @@ button:hover, .shop:hover {
     height: 2rem;
     margin-top: 1rem;
     display: block;
+}
+.dropPopUp {
+    width: 30vw;
+    height: 70vh;
+    padding: 0 5vw;
+    position: absolute;
+    left: 35vw;
+    top: 15vh;
+    background: #444;
+    border: solid 5px gold;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.dropPopUp p {
+    font-size: 2rem;
+    text-align: center;
+    color: gold;
+}
+.continueButton {
+    width: 15vw;
+    height: 5vh;
+    /* margin-left: 2.25vw; */
 }

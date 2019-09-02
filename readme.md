@@ -13,7 +13,7 @@ Simple adventure is a browser turn based game with a fantasy theme. It's made be
 https://marekszczepanski.github.io/Simple-Adventure/
 
 ## Recent changes
-1) Add start game function.  
-2) Add attack function.  
-3) Add character objects.  
-4) Add weapon objects.
+1) Add weapon looting and drop lists.  
+2) Add game over on 0 health ponts.  
+3) Add monster death and new enemy button.  
+4) Minor layout changes.
